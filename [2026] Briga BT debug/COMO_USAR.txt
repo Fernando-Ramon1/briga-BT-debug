@@ -1,0 +1,20 @@
+Briga - como usar
+
+Painel
+https://fernando-ramon1.github.io/briga_github/
+
+Abra no Chrome do Android ou em um computador com o Bluetooth ligado. Use um aparelho conectado por vez.
+
+Passa o código
+
+1. Ligue o robô no modo Auto. No painel, clique em Conectar ao robô e selecione Briga_Briga_Based.
+2. Confira abertura, lado inicial e bandeira. Marque Debug ligado neste ensaio, clique em Aplicar configuração e aguarde a confirmação na placa.
+3. Use o controle remoto: botão 1 prepara, botão 2 inicia e botão 3 para.
+4. Com debug ligado, o botão 3 bloqueia os movimentos e preserva a conexão e o histórico. Sem debug, continua normal: para e reinicia.
+5. Aguarde os eventos restantes chegarem ao painel e clique em Exportar CSV antes de reiniciar o robô ou fechar a página. Para outro ensaio, reinicie e configure novamente.
+
+Os filtros separam estados, motores e recuperações da linha. A duração de uma transição pertence ao estado anterior. Cada fuga recebe um número. FIM_LINHA indica que os movimentos programados terminaram, não que o sensor voltou ao preto.
+
+Pausar atualização da tabela congela só a visualização. Pausar consultas interrompe os pedidos do navegador. Congelar captura para os novos registros no ESP32. Retomar captura volta a gravar. Nova captura apaga os registros da placa e começa outro histórico. Depois da parada pelo contole remoto com debug ligado, retomada e nova captura ficam bloqueadas até o reset.
+
+O histórico tem limite e o painel informa perdas. Fechar o site, desconectar ou congelar a captura não para os motores. A parada é pelo botão 3 do IR.
